@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { services } from "@/lib/data";
+import { services, type Service } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
 
@@ -31,7 +31,8 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetail() {
-  const { service } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { service: Service };
+  const service = data.service;
   const { t, lang } = useI18n();
   const others = services.filter((s) => s.slug !== service.slug);
 

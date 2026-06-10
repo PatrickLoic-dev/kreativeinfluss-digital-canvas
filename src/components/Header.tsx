@@ -25,7 +25,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-10 text-[0.78rem] uppercase tracking-[0.18em] font-medium">
           {nav.map((n) => {
-            const active = pathname === n.to || (n.to !== "/" && pathname.startsWith(n.to));
+            const active = pathname.startsWith(n.to);
             return (
               <Link
                 key={n.to}

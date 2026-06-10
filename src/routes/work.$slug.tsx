@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { cases } from "@/lib/data";
+import { cases, type CaseStudy } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -32,7 +32,8 @@ export const Route = createFileRoute("/work/$slug")({
 });
 
 function CaseDetail() {
-  const { c, next } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { c: CaseStudy; next: CaseStudy };
+  const { c, next } = data;
   const { t, lang } = useI18n();
 
   const sections = [
