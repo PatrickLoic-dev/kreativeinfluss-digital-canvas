@@ -31,7 +31,7 @@ function Home() {
       <section className="relative min-h-[92vh] flex flex-col container-x pt-16">
         <div className="flex items-center justify-between gap-6 hairline-b pb-6">
           <p className="eyebrow">{t("home.eyebrow")}</p>
-          <p className="eyebrow hidden md:block">— Yaoundé / Remote / Globe</p>
+          <p className="eyebrow hidden md:block">— {t("home.location")}</p>
         </div>
 
         <div className="flex-1 flex flex-col justify-center py-12">
