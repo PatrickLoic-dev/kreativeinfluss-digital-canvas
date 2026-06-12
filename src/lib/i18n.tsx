@@ -18,7 +18,8 @@ const fr: Dict = {
   "footer.rights": "Tous droits réservés.",
   "footer.based": "Basé partout, livré globalement.",
 
-  "home.eyebrow": "Studio Créatif & Tech — Depuis 2023",
+  "home.eyebrow": "Studio Créatif & Tech — Depuis 2025",
+  "home.location": "France / Remote / Global",
   "home.hero.l1": "Idées",
   "home.hero.l2": "structurées,",
   "home.hero.l3": "impact",
@@ -35,12 +36,12 @@ const fr: Dict = {
 
   "about.eyebrow": "À propos",
   "about.title": "Une équipe créative-tech, méthodique et humaine.",
-  "about.body": "Kreativstudio Einfluss réunit designers, développeurs et stratèges autour d'une même conviction : la qualité naît de la discipline. Nous combinons design, ingénierie et pensée stratégique pour livrer des produits performants, centrés utilisateurs, et porteurs de sens.",
+  "about.body": "Fondé en 2025 et basé en France, Kreativstudio Einfluss réunit designers, développeurs et stratèges autour d'une même conviction : la qualité naît de la discipline. Nous combinons design, ingénierie et pensée stratégique pour livrer des produits performants, centrés utilisateurs, et porteurs de sens.",
   "about.mission.title": "Mission",
   "about.mission.body": "Concevoir et construire des solutions digitales sur-mesure qui dépassent les attentes — alliant esthétique et performance pour un impact réel.",
   "about.vision.title": "Vision",
   "about.vision.body": "Devenir un studio créatif-tech de référence, façonnant le futur du web et du design UI/UX par l'innovation et la conscience culturelle.",
-  "about.team.title": "L'équipe",
+  "about.team.title": "Core team",
   "about.team.sub": "Une cellule restreinte, multidisciplinaire et engagée.",
 
   "services.eyebrow": "Services",
@@ -90,7 +91,8 @@ const en: Dict = {
   "footer.rights": "All rights reserved.",
   "footer.based": "Based everywhere, delivered globally.",
 
-  "home.eyebrow": "Creative & Tech Studio — Since 2023",
+  "home.eyebrow": "Creative & Tech Studio — Since 2025",
+  "home.location": "France / Remote / Global",
   "home.hero.l1": "Structured",
   "home.hero.l2": "ideas,",
   "home.hero.l3": "measurable",
@@ -107,12 +109,12 @@ const en: Dict = {
 
   "about.eyebrow": "About",
   "about.title": "A creative-tech team, methodical and human.",
-  "about.body": "Kreativstudio Einfluss brings together designers, developers and strategists around one belief: quality is the result of discipline. We combine design, engineering and strategic thinking to deliver performant, user-centered products that mean something.",
+  "about.body": "Founded in 2025 and based in France, Kreativstudio Einfluss brings together designers, developers and strategists around one belief: quality is the result of discipline. We combine design, engineering and strategic thinking to deliver performant, user-centered products that mean something.",
   "about.mission.title": "Mission",
   "about.mission.body": "To design and build tailored digital solutions that exceed expectations — pairing aesthetics with performance for real impact.",
   "about.vision.title": "Vision",
   "about.vision.body": "To become a reference creative-tech studio, shaping the future of web and UI/UX through innovation and cultural awareness.",
-  "about.team.title": "The team",
+  "about.team.title": "Core team",
   "about.team.sub": "A tight, multidisciplinary, committed cell.",
 
   "services.eyebrow": "Services",

@@ -188,6 +188,12 @@
   }
   .animate-rise { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(18px); filter: blur(4px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+  .animate-page-in { animation: pageIn 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
   @keyframes blink { 50% { opacity: 0; } }
   .animate-blink { animation: blink 1.2s steps(2) infinite; }
 
