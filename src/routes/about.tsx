@@ -98,23 +98,29 @@ function About() {
 
       <section className="container-x pb-28 grid md:grid-cols-12 gap-10 hairline-t pt-16">
         <p className="md:col-span-4 eyebrow">— {lang === "fr" ? "Studio" : "Studio"}</p>
-        <p className="md:col-span-8 text-xl md:text-2xl leading-snug font-display max-w-3xl">
-          {t("about.body")}
-        </p>
+        <Reveal className="md:col-span-8">
+          <p className="text-xl md:text-2xl leading-snug font-display max-w-3xl">
+            {t("about.body")}
+          </p>
+        </Reveal>
       </section>
 
       <section className="bg-surface hairline-t">
         <div className="container-x py-24 grid md:grid-cols-2 gap-px bg-hairline">
-          <div className="bg-surface p-10 md:p-14">
-            <p className="eyebrow">— {t("about.mission.title")}</p>
-            <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.mission.title")}</h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.mission.body")}</p>
-          </div>
-          <div className="bg-surface p-10 md:p-14">
-            <p className="eyebrow">— {t("about.vision.title")}</p>
-            <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.vision.title")}</h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.vision.body")}</p>
-          </div>
+          <Reveal delay={0}>
+            <div className="bg-surface p-10 md:p-14">
+              <p className="eyebrow">— {t("about.mission.title")}</p>
+              <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.mission.title")}</h2>
+              <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.mission.body")}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="bg-surface p-10 md:p-14">
+              <p className="eyebrow">— {t("about.vision.title")}</p>
+              <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.vision.title")}</h2>
+              <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.vision.body")}</p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -164,12 +170,14 @@ function About() {
       </section>
 
       <section className="container-x pb-28 text-center">
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-3 rounded-full border border-foreground px-7 py-4 text-sm uppercase tracking-[0.2em] hover:bg-primary hover:border-primary hover:text-primary-foreground transition-colors"
-        >
-          {t("cta.start")}
-        </Link>
+        <Reveal>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 rounded-full border border-foreground px-7 py-4 text-sm uppercase tracking-[0.2em] hover:bg-primary hover:border-primary hover:text-primary-foreground transition-colors"
+          >
+            {t("cta.start")}
+          </Link>
+        </Reveal>
       </section>
     </>
   );
