@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
+  Outlet,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -14,7 +15,6 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageLoader } from "@/components/PageLoader";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { RouteTransition } from "@/components/RouteTransition";
 
 function NotFoundComponent() {
   return (
@@ -110,7 +110,7 @@ function RootComponent() {
         <CustomCursor />
         <Header />
         <main className="pt-16 md:pt-20">
-          <RouteTransition />
+          <Outlet />
         </main>
         <Footer />
       </I18nProvider>
