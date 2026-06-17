@@ -1,27 +1,91 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
+import { Linkedin, Instagram, Twitter, Github, Globe, Dribbble } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "À propos — Kreativstudio Einfluss™" },
-      { name: "description", content: "Studio créatif-tech : designers, développeurs et stratèges au service de marques ambitieuses." },
+      { name: "description", content: "Studio créatif-tech basé en France depuis 2025 : designers, développeurs et stratèges au service de marques ambitieuses." },
       { property: "og:title", content: "À propos — Kreativstudio Einfluss™" },
-      { property: "og:description", content: "Studio créatif-tech : designers, développeurs et stratèges au service de marques ambitieuses." },
+      { property: "og:description", content: "Studio créatif-tech basé en France depuis 2025 : designers, développeurs et stratèges au service de marques ambitieuses." },
     ],
   }),
   component: About,
 });
 
-const team = [
-  { name: "Kangue Loïc", role: { fr: "Fondateur & Direction Créative", en: "Founder & Creative Director" } },
-  { name: "Naomi Ekoume", role: { fr: "Lead UI/UX Designer", en: "Lead UI/UX Designer" } },
-  { name: "Idris Tchoumi", role: { fr: "Lead Engineer", en: "Lead Engineer" } },
-  { name: "Maëlys Bekolo", role: { fr: "Brand & Graphic Designer", en: "Brand & Graphic Designer" } },
-  { name: "Samuel Nguini", role: { fr: "Stratégie & Communication", en: "Strategy & Communication" } },
-  { name: "Linda Owono", role: { fr: "Community & Content", en: "Community & Content" } },
+type Social = { type: "linkedin" | "instagram" | "twitter" | "github" | "dribbble" | "website"; href: string };
+
+const team: Array<{
+  name: string;
+  role: { fr: string; en: string };
+  photo?: string;
+  socials: Social[];
+}> = [
+  {
+    name: "Kangue Loïc",
+    role: { fr: "Fondateur & Direction Créative", en: "Founder & Creative Director" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/kangue-loic" },
+      { type: "instagram", href: "https://www.instagram.com/kangue.loic" },
+      { type: "website", href: "https://kreativeinfluss.com" },
+    ],
+  },
+  {
+    name: "Naomi Ekoume",
+    role: { fr: "Lead UI/UX Designer", en: "Lead UI/UX Designer" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/naomi-ekoume" },
+      { type: "dribbble", href: "https://dribbble.com/naomi-ekoume" },
+      { type: "instagram", href: "https://www.instagram.com/naomi.ekoume" },
+    ],
+  },
+  {
+    name: "Idris Tchoumi",
+    role: { fr: "Lead Engineer", en: "Lead Engineer" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/idris-tchoumi" },
+      { type: "github", href: "https://github.com/idris-tchoumi" },
+      { type: "twitter", href: "https://twitter.com/idris_tchoumi" },
+    ],
+  },
+  {
+    name: "Maëlys Bekolo",
+    role: { fr: "Brand & Graphic Designer", en: "Brand & Graphic Designer" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/maelys-bekolo" },
+      { type: "instagram", href: "https://www.instagram.com/maelys.bekolo" },
+      { type: "dribbble", href: "https://dribbble.com/maelys-bekolo" },
+    ],
+  },
+  {
+    name: "Samuel Nguini",
+    role: { fr: "Stratégie & Communication", en: "Strategy & Communication" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/samuel-nguini" },
+      { type: "twitter", href: "https://twitter.com/samuel_nguini" },
+    ],
+  },
+  {
+    name: "Linda Owono",
+    role: { fr: "Community & Content", en: "Community & Content" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/linda-owono" },
+      { type: "instagram", href: "https://www.instagram.com/linda.owono" },
+      { type: "twitter", href: "https://twitter.com/linda_owono" },
+    ],
+  },
 ];
+
+const socialIcon = {
+  linkedin: Linkedin,
+  instagram: Instagram,
+  twitter: Twitter,
+  github: Github,
+  dribbble: Dribbble,
+  website: Globe,
+} as const;
 
 function About() {
   const { t, lang } = useI18n();
@@ -62,13 +126,36 @@ function About() {
         <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-hairline">
           {team.map((m, i) => (
             <Reveal key={m.name} delay={i * 60}>
-              <li className="bg-background p-8 h-full flex flex-col justify-between min-h-[220px] group">
-                <div className="aspect-square w-16 rounded-full border border-hairline flex items-center justify-center font-display text-sm text-muted-foreground group-hover:border-primary group-hover:text-primary transition-colors">
-                  {m.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}
-                </div>
+              <li className="bg-background p-8 h-full flex flex-col justify-between min-h-[260px] group">
+                {m.photo ? (
+                  <div className="h-20 w-20 overflow-hidden rounded-full border border-hairline">
+                    <img src={m.photo} alt={m.name} className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  </div>
+                ) : (
+                  <div className="h-20 w-20 rounded-full border border-hairline flex items-center justify-center font-display text-base text-muted-foreground group-hover:border-primary group-hover:text-primary transition-colors">
+                    {m.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}
+                  </div>
+                )}
                 <div>
                   <h3 className="font-display text-2xl mt-10">{m.name}</h3>
                   <p className="text-sm text-muted-foreground mt-2">{m.role[lang]}</p>
+                  <div className="mt-5 flex items-center gap-3">
+                    {m.socials.map((s) => {
+                      const Icon = socialIcon[s.type];
+                      return (
+                        <a
+                          key={s.type + s.href}
+                          href={s.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${m.name} — ${s.type}`}
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-hairline text-muted-foreground hover:border-primary hover:text-primary transition-colors"
+                        >
+                          <Icon size={14} />
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
               </li>
             </Reveal>
