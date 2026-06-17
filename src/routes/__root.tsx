@@ -15,6 +15,7 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageLoader } from "@/components/PageLoader";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageTransition } from "@/components/PageTransition";
 
 function NotFoundComponent() {
   return (
@@ -110,7 +111,9 @@ function RootComponent() {
         <CustomCursor />
         <Header />
         <main className="pt-16 md:pt-20">
-          <Outlet />
+          <PageTransition>
+            <Outlet />
+          </PageTransition>
         </main>
         <Footer />
       </I18nProvider>
