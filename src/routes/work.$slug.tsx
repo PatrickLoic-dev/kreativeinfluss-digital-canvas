@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { cases, type CaseStudy } from "@/lib/data";
 import { useI18n } from "@/lib/i18n";
+import { Reveal } from "@/components/Reveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/work/$slug")({
@@ -75,20 +76,22 @@ function CaseDetail() {
       </section>
 
       <section className="container-x pb-20 grid md:grid-cols-3 gap-px bg-hairline hairline-y">
-        <Meta label={t("case.client")} value={c.client} />
-        <Meta label={t("case.year")} value={c.year} />
-        <Meta label={t("case.scope")} value={c.scope[lang]} />
+        <Reveal delay={0}><Meta label={t("case.client")} value={c.client} /></Reveal>
+        <Reveal delay={60}><Meta label={t("case.year")} value={c.year} /></Reveal>
+        <Reveal delay={120}><Meta label={t("case.scope")} value={c.scope[lang]} /></Reveal>
       </section>
 
       <section className="container-x py-20 space-y-20">
         {sections.map((s, i) => (
-          <div key={s.label} className="grid md:grid-cols-12 gap-8 hairline-b pb-16">
-            <div className="md:col-span-4">
-              <p className="eyebrow">— 0{i + 1}</p>
-              <h2 className="font-display text-3xl md:text-5xl mt-4">{s.label}</h2>
+          <Reveal key={s.label} delay={i * 80}>
+            <div className="grid md:grid-cols-12 gap-8 hairline-b pb-16">
+              <div className="md:col-span-4">
+                <p className="eyebrow">— 0{i + 1}</p>
+                <h2 className="font-display text-3xl md:text-5xl mt-4">{s.label}</h2>
+              </div>
+              <p className="md:col-span-7 md:col-start-6 text-lg text-foreground/90 leading-relaxed">{s.body}</p>
             </div>
-            <p className="md:col-span-7 md:col-start-6 text-lg text-foreground/90 leading-relaxed">{s.body}</p>
-          </div>
+          </Reveal>
         ))}
       </section>
 
