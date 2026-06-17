@@ -16,9 +16,9 @@ const fr: Dict = {
   "cta.back": "Retour",
   "footer.tagline": "Studio créatif & technologique. Conçu avec intention.",
   "footer.rights": "Tous droits réservés.",
-  "footer.based": "Basé partout, livré globalement.",
+  "footer.based": "Basé en France, livré globalement.",
 
-  "home.eyebrow": "Studio Créatif & Tech — Depuis 2023",
+  "home.eyebrow": "Studio Créatif & Tech — Depuis 2025",
   "home.hero.l1": "Idées",
   "home.hero.l2": "structurées,",
   "home.hero.l3": "impact",
@@ -88,9 +88,9 @@ const en: Dict = {
   "cta.back": "Back",
   "footer.tagline": "Creative & technology studio. Built with intent.",
   "footer.rights": "All rights reserved.",
-  "footer.based": "Based everywhere, delivered globally.",
+  "footer.based": "Based in France, delivered globally.",
 
-  "home.eyebrow": "Creative & Tech Studio — Since 2023",
+  "home.eyebrow": "Creative & Tech Studio — Since 2025",
   "home.hero.l1": "Structured",
   "home.hero.l2": "ideas,",
   "home.hero.l3": "measurable",
