@@ -94,16 +94,18 @@ export function RouteTransition() {
           ))}
         </div>
 
-        {/* centerpiece */}
-        <div className="relative flex flex-col items-center gap-6">
+        {/* center icon */}
+        <div className="relative flex flex-col items-center">
           <div className="flex h-20 w-20 items-center justify-center rounded-full border border-hairline">
             <Icon size={34} strokeWidth={1.25} className="text-primary" />
           </div>
-          <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
-            <span className="h-px w-8 bg-muted-foreground" />
-            <span className="font-display text-foreground">{meta.label}</span>
-            <span className="h-px w-8 bg-muted-foreground" />
-          </div>
+        </div>
+
+        {/* page title at bottom */}
+        <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center gap-3 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
+          <span className="h-px w-8 bg-muted-foreground" />
+          <span className="font-display text-foreground">{meta.label}</span>
+          <span className="h-px w-8 bg-muted-foreground" />
         </div>
       </div>
     </>
