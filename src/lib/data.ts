@@ -18,8 +18,8 @@ export const services: Service[] = [
       en: "Performant, scalable, accessible platforms.",
     },
     long: {
-      fr: "Nous concevons et développons des sites, applications et plateformes sur-mesure — du marketing site à la SaaS complexe, en passant par les applications mobiles natives et hybrides.",
-      en: "We design and build custom websites, applications and platforms — from marketing sites to complex SaaS, including native and hybrid mobile apps.",
+      fr: "Nous concevons et développons des sites, applications et plateformes sur-mesure · du marketing site à la SaaS complexe, en passant par les applications mobiles natives et hybrides.",
+      en: "We design and build custom websites, applications and platforms · from marketing sites to complex SaaS, including native and hybrid mobile apps.",
     },
     process: {
       fr: ["Audit & spécifications techniques", "Architecture & choix de stack", "Développement itératif", "QA, performance & SEO", "Déploiement & monitoring"],
