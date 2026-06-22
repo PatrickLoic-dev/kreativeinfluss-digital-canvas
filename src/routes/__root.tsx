@@ -70,6 +70,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Studio créatif et technologique. Design, développement et stratégie pour des marques ambitieuses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Kreativstudio Einfluss™ · Creative & Tech Studio" },
+      { name: "twitter:description", content: "Studio créatif et technologique. Design, développement et stratégie pour des marques ambitieuses." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb1935ed-d028-412a-949d-0b7c33b57272" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fb1935ed-d028-412a-949d-0b7c33b57272" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
