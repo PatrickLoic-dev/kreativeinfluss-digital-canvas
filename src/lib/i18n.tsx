@@ -18,7 +18,7 @@ const fr: Dict = {
   "footer.rights": "Tous droits réservés.",
   "footer.based": "Basé en France, livré globalement.",
 
-  "home.eyebrow": "Studio Créatif & Tech — Depuis 2025",
+  "home.eyebrow": "Studio Créatif & Tech · Depuis 2025",
   "home.hero.l1": "Idées",
   "home.hero.l2": "structurées,",
   "home.hero.l3": "impact",
@@ -73,7 +73,7 @@ const fr: Dict = {
   "contact.form.submit": "Envoyer la demande",
   "contact.form.sent": "Message envoyé. Nous revenons vers vous très vite.",
   "contact.info.title": "Coordonnées",
-  "contact.info.hours": "Lun — Ven · 9h — 19h",
+  "contact.info.hours": "Lun · Ven · 9h · 19h",
 };
 
 const en: Dict = {
@@ -90,7 +90,7 @@ const en: Dict = {
   "footer.rights": "All rights reserved.",
   "footer.based": "Based in France, delivered globally.",
 
-  "home.eyebrow": "Creative & Tech Studio — Since 2025",
+  "home.eyebrow": "Creative & Tech Studio · Since 2025",
   "home.hero.l1": "Structured",
   "home.hero.l2": "ideas,",
   "home.hero.l3": "measurable",
@@ -145,7 +145,7 @@ const en: Dict = {
   "contact.form.submit": "Send request",
   "contact.form.sent": "Message sent. We'll be in touch shortly.",
   "contact.info.title": "Reach us",
-  "contact.info.hours": "Mon — Fri · 9am — 7pm",
+  "contact.info.hours": "Mon · Fri · 9am · 7pm",
 };
 
 const dicts: Record<Lang, Dict> = { fr, en };
