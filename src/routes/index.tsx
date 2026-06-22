@@ -38,7 +38,7 @@ function Home() {
           <h1 className="font-display text-display-1 font-medium">
             <span className="block animate-rise" style={{ animationDelay: "0.05s" }}>{t("home.hero.l1")}</span>
             <span className="block animate-rise" style={{ animationDelay: "0.15s" }}>
-              {t("home.hero.l2")} <span className="text-primary italic font-normal">—</span>
+              {t("home.hero.l2")} <span className="text-primary not-italic font-normal">●</span>
             </span>
             <span className="block animate-rise" style={{ animationDelay: "0.25s" }}>{t("home.hero.l3")}</span>
             <span className="block animate-rise" style={{ animationDelay: "0.35s" }}>{t("home.hero.l4")}</span>
