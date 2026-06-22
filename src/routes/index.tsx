@@ -7,9 +7,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kreativstudio Einfluss™ — Studio Créatif & Tech" },
+      { title: "Kreativstudio Einfluss™ · Studio Créatif & Tech" },
       { name: "description", content: "Studio créatif et technologique. Design, développement et stratégie pour marques ambitieuses." },
-      { property: "og:title", content: "Kreativstudio Einfluss™ — Studio Créatif & Tech" },
+      { property: "og:title", content: "Kreativstudio Einfluss™ · Studio Créatif & Tech" },
       { property: "og:description", content: "Studio créatif et technologique. Design, développement et stratégie pour marques ambitieuses." },
     ],
   }),
@@ -31,7 +31,7 @@ function Home() {
       <section className="relative min-h-[92vh] flex flex-col container-x pt-16">
         <div className="flex items-center justify-between gap-6 hairline-b pb-6">
           <p className="eyebrow">{t("home.eyebrow")}</p>
-          <p className="eyebrow hidden md:block">— France / Remote / Globe</p>
+          <p className="eyebrow hidden md:block">· France / Remote / Globe</p>
         </div>
 
         <div className="flex-1 flex flex-col justify-center py-12">
@@ -76,7 +76,7 @@ function Home() {
       <section className="container-x py-28 md:py-40">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
-            <p className="eyebrow">— {lang === "fr" ? "Studio" : "Studio"}</p>
+            <p className="eyebrow">· {lang === "fr" ? "Studio" : "Studio"}</p>
           </div>
           <div className="md:col-span-8 space-y-10">
             <Reveal>
@@ -173,7 +173,7 @@ function Home() {
 
       {/* CTA */}
       <section className="container-x py-28 md:py-40 text-center">
-        <p className="eyebrow">— {lang === "fr" ? "Démarrer" : "Begin"}</p>
+        <p className="eyebrow">· {lang === "fr" ? "Démarrer" : "Begin"}</p>
         <h2 className="font-display text-display-2 mt-6">{t("home.cta.title")}</h2>
         <p className="text-muted-foreground mt-6 max-w-xl mx-auto">{t("home.cta.sub")}</p>
         <Link

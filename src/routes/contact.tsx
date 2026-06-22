@@ -7,9 +7,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Kreativstudio Einfluss™" },
+      { title: "Contact · Kreativstudio Einfluss™" },
       { name: "description", content: "Parlons de votre projet. Nous revenons sous 48 heures." },
-      { property: "og:title", content: "Contact — Kreativstudio Einfluss™" },
+      { property: "og:title", content: "Contact · Kreativstudio Einfluss™" },
       { property: "og:description", content: "Parlons de votre projet. Nous revenons sous 48 heures." },
     ],
   }),
@@ -41,7 +41,7 @@ function Contact() {
         <div className="md:col-span-4 space-y-10">
           <Reveal delay={0}>
             <div>
-              <p className="eyebrow">— {t("contact.info.title")}</p>
+              <p className="eyebrow">· {t("contact.info.title")}</p>
               <ul className="mt-6 space-y-3 text-lg font-display">
                 <li><a href="mailto:hello@kreativeinfluss.com" className="link-underline">hello@kreativeinfluss.com</a></li>
                 <li><a href="tel:+237000000000" className="link-underline">+237 000 000 000</a></li>
@@ -51,7 +51,7 @@ function Contact() {
           </Reveal>
           <Reveal delay={60}>
             <div>
-              <p className="eyebrow">— Social</p>
+              <p className="eyebrow">· Social</p>
               <ul className="mt-4 space-y-2 text-sm">
                 <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="link-underline">Instagram</a></li>
                 <li><a href="https://linkedin.com" target="_blank" rel="noreferrer" className="link-underline">LinkedIn</a></li>
@@ -65,7 +65,7 @@ function Contact() {
           {sent ? (
             <Reveal>
               <div className="border border-primary p-10">
-                <p className="eyebrow text-primary">— ✓</p>
+                <p className="eyebrow text-primary">· ✓</p>
                 <p className="mt-4 font-display text-3xl">{t("contact.form.sent")}</p>
               </div>
             </Reveal>
@@ -77,7 +77,7 @@ function Contact() {
                 <Field label={t("contact.form.company")} name="company" />
 
                 <div>
-                  <p className="eyebrow mb-4">— {t("contact.form.budget")}</p>
+                  <p className="eyebrow mb-4">· {t("contact.form.budget")}</p>
                   <div className="flex flex-wrap gap-2">
                     {budgets.map((b) => (
                       <label key={b} className="cursor-pointer">
@@ -91,7 +91,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label className="block eyebrow mb-3">— {t("contact.form.message")}</label>
+                  <label className="block eyebrow mb-3">· {t("contact.form.message")}</label>
                   <textarea
                     name="message"
                     rows={6}
@@ -118,7 +118,7 @@ function Contact() {
 function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
   return (
     <div>
-      <label className="block eyebrow mb-3">— {label}{required ? " *" : ""}</label>
+      <label className="block eyebrow mb-3">· {label}{required ? " *" : ""}</label>
       <input
         name={name}
         type={type}

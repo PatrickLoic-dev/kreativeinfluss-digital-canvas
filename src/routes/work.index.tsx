@@ -7,10 +7,10 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Kreativstudio Einfluss™" },
-      { name: "description", content: "Sélection de projets — client, problème, analyse, processus, solution." },
-      { property: "og:title", content: "Portfolio — Kreativstudio Einfluss™" },
-      { property: "og:description", content: "Sélection de projets — client, problème, analyse, processus, solution." },
+      { title: "Portfolio · Kreativstudio Einfluss™" },
+      { name: "description", content: "Sélection de projets · client, problème, analyse, processus, solution." },
+      { property: "og:title", content: "Portfolio · Kreativstudio Einfluss™" },
+      { property: "og:description", content: "Sélection de projets · client, problème, analyse, processus, solution." },
     ],
   }),
   component: WorkIndex,

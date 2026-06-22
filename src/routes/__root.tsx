@@ -63,10 +63,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kreativstudio Einfluss™ — Creative & Tech Studio" },
+      { title: "Kreativstudio Einfluss™ · Creative & Tech Studio" },
       { name: "description", content: "Studio créatif et technologique. Design, développement et stratégie pour des marques ambitieuses." },
       { name: "author", content: "Kreativstudio Einfluss" },
-      { property: "og:title", content: "Kreativstudio Einfluss™ — Creative & Tech Studio" },
+      { property: "og:title", content: "Kreativstudio Einfluss™ · Creative & Tech Studio" },
       { property: "og:description", content: "Studio créatif et technologique. Design, développement et stratégie pour des marques ambitieuses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
