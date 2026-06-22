@@ -25,11 +25,20 @@ const team: Array<{
 }> = [
   {
     name: "Kangue Loïc",
-    role: { fr: "Fondateur & Direction Créative", en: "Founder & Creative Director" },
+    role: { fr: "Co-fondateur · Direction Créative", en: "Co-founder · Creative Director" },
     socials: [
       { type: "linkedin", href: "https://www.linkedin.com/in/kangue-loic" },
       { type: "instagram", href: "https://www.instagram.com/kangue.loic" },
       { type: "website", href: "https://kreativeinfluss.com" },
+    ],
+  },
+  {
+    name: "Njoume Eteh Claude Arsene Calvin",
+    role: { fr: "Co-fondateur · Graphic Designer & Développeur", en: "Co-founder · Graphic Designer & Developer" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/claude-arsene-njoume" },
+      { type: "github", href: "https://github.com/claude-arsene" },
+      { type: "instagram", href: "https://www.instagram.com/claude.arsene" },
     ],
   },
   {
