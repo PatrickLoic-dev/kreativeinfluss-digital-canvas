@@ -2,11 +2,47 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Power Grotesk";
+  src: url("/__l5e/assets-v1/9e3dc248-7c39-4b29-8f78-a5dc5677137c/PowerGroteskTrial-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Power Grotesk";
+  src: url("/__l5e/assets-v1/91ed369d-09f2-4432-82db-d04b6fa88906/PowerGroteskTrial-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Power Grotesk";
+  src: url("/__l5e/assets-v1/a65ff483-4066-4517-9265-ddcf2e05247d/PowerGroteskTrial-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Power Grotesk";
+  src: url("/__l5e/assets-v1/e79035c9-a7fd-4ecf-ba32-99b9ed05e9d4/PowerGroteskTrial-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Power Grotesk";
+  src: url("/__l5e/assets-v1/61a483fc-cb27-41ac-a21f-be83147a9cab/PowerGroteskTrial-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Power Grotesk", "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Power Grotesk", "DM Sans", system-ui, sans-serif;
 
   --radius-sm: 2px;
   --radius-md: 4px;
