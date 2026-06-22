@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ loaderData }) => {
     const s = loaderData?.service;
-    const title = s ? `${s.title.fr} — Services` : "Service";
+    const title = s ? `${s.title.fr} · Services` : "Service";
     return {
       meta: [
         { title: `${title} · Kreativstudio Einfluss™` },
@@ -46,44 +46,55 @@ function ServiceDetail() {
       </section>
 
       <section className="container-x pb-20 hairline-b">
-        <p className="eyebrow">— {service.number}</p>
+        <p className="eyebrow">· {service.number}</p>
         <h1 className="font-display text-display-1 mt-6">{service.title[lang]}</h1>
         <Reveal>
           <p className="mt-10 max-w-2xl text-xl text-muted-foreground leading-snug">{service.long[lang]}</p>
         </Reveal>
       </section>
 
-      <section className="container-x py-20 grid md:grid-cols-2 gap-px bg-hairline hairline-b">
-        <Reveal>
-          <div className="bg-background pr-8 md:pr-12">
-            <p className="eyebrow">— {t("service.process")}</p>
-            <ol className="mt-8 space-y-6">
-              {service.process[lang].map((step, i) => (
-                <li key={i} className="flex gap-6 hairline-b pb-6">
-                  <span className="font-display text-xs text-muted-foreground tabular-nums w-10 shrink-0 mt-1">0{i + 1}</span>
-                  <span className="font-display text-xl">{step}</span>
+      <section className="container-x py-20 hairline-b">
+        <div className="grid md:grid-cols-12 gap-8 mb-12">
+          <p className="md:col-span-4 eyebrow">{t("service.process")}</p>
+          <p className="md:col-span-8 text-muted-foreground max-w-2xl">
+            {lang === "fr"
+              ? "Chaque étape de notre processus produit des livrables concrets."
+              : "Each step in our process delivers concrete outputs."}
+          </p>
+        </div>
+        <ol className="space-y-px bg-hairline">
+          {service.process[lang].map((step, i) => {
+            const deliverable = service.deliverables[lang][i];
+            return (
+              <Reveal key={i} delay={i * 80}>
+                <li className="bg-background grid md:grid-cols-12 gap-8 p-8 md:p-10">
+                  <div className="md:col-span-1">
+                    <span className="font-display text-sm text-muted-foreground tabular-nums">0{i + 1}</span>
+                  </div>
+                  <div className="md:col-span-6">
+                    <h3 className="font-display text-2xl md:text-3xl tracking-tight">{step}</h3>
+                  </div>
+                  <div className="md:col-span-5">
+                    {deliverable && (
+                      <>
+                        <p className="eyebrow mb-3">{t("service.deliverables")}</p>
+                        <div className="flex items-start gap-3">
+                          <span className="text-primary text-lg leading-none mt-1.5">●</span>
+                          <span className="font-display text-lg">{deliverable}</span>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </li>
-              ))}
-            </ol>
-          </div>
-        </Reveal>
-        <Reveal delay={80}>
-          <div className="bg-background pl-8 md:pl-12">
-            <p className="eyebrow">— {t("service.deliverables")}</p>
-            <ul className="mt-8 space-y-6">
-              {service.deliverables[lang].map((d, i) => (
-                <li key={i} className="flex gap-6 hairline-b pb-6">
-                  <span className="text-primary text-xl leading-none mt-1">●</span>
-                  <span className="font-display text-xl">{d}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
+              </Reveal>
+            );
+          })}
+        </ol>
       </section>
 
+
       <section className="container-x py-24">
-        <p className="eyebrow mb-8">— {t("service.related")}</p>
+        <p className="eyebrow mb-8">· {t("service.related")}</p>
         <ul>
           {others.map((s, i) => (
             <li key={s.slug}>

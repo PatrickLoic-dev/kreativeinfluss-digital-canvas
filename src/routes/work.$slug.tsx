@@ -16,9 +16,9 @@ export const Route = createFileRoute("/work/$slug")({
     const c = loaderData?.c;
     return {
       meta: [
-        { title: `${c?.client ?? "Case"} — Kreativstudio Einfluss™` },
+        { title: `${c?.client ?? "Case"} · Kreativstudio Einfluss™` },
         { name: "description", content: c?.title.fr ?? "" },
-        { property: "og:title", content: `${c?.client ?? "Case"} — Kreativstudio Einfluss™` },
+        { property: "og:title", content: `${c?.client ?? "Case"} · Kreativstudio Einfluss™` },
         { property: "og:description", content: c?.title.fr ?? "" },
       ],
     };
@@ -86,7 +86,7 @@ function CaseDetail() {
           <Reveal key={s.label} delay={i * 80}>
             <div className="grid md:grid-cols-12 gap-8 hairline-b pb-16">
               <div className="md:col-span-4">
-                <p className="eyebrow">— 0{i + 1}</p>
+                <p className="eyebrow">· 0{i + 1}</p>
                 <h2 className="font-display text-3xl md:text-5xl mt-4">{s.label}</h2>
               </div>
               <p className="md:col-span-7 md:col-start-6 text-lg text-foreground/90 leading-relaxed">{s.body}</p>
@@ -97,7 +97,7 @@ function CaseDetail() {
 
       <section className="hairline-t bg-surface">
         <Link to="/work/$slug" params={{ slug: next.slug }} className="group block container-x py-20 md:py-28">
-          <p className="eyebrow">— {t("case.next")}</p>
+          <p className="eyebrow">· {t("case.next")}</p>
           <div className="mt-6 flex items-center justify-between gap-6">
             <h2 className="font-display text-display-2 group-hover:text-primary transition-colors">{next.client}</h2>
             <ArrowRight size={48} className="text-foreground/60 group-hover:text-primary group-hover:translate-x-2 transition-transform shrink-0" />
@@ -112,7 +112,7 @@ function CaseDetail() {
 function Meta({ label, value }: { label: string; value: string }) {
   return (
     <div className="bg-background p-8">
-      <p className="eyebrow">— {label}</p>
+      <p className="eyebrow">· {label}</p>
       <p className="font-display text-2xl mt-4">{value}</p>
     </div>
   );

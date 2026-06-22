@@ -6,9 +6,9 @@ import { Linkedin, Instagram, Twitter, Github, Globe, Dribbble } from "lucide-re
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "À propos — Kreativstudio Einfluss™" },
+      { title: "À propos · Kreativstudio Einfluss™" },
       { name: "description", content: "Studio créatif-tech basé en France depuis 2025 : designers, développeurs et stratèges au service de marques ambitieuses." },
-      { property: "og:title", content: "À propos — Kreativstudio Einfluss™" },
+      { property: "og:title", content: "À propos · Kreativstudio Einfluss™" },
       { property: "og:description", content: "Studio créatif-tech basé en France depuis 2025 : designers, développeurs et stratèges au service de marques ambitieuses." },
     ],
   }),
@@ -25,11 +25,20 @@ const team: Array<{
 }> = [
   {
     name: "Kangue Loïc",
-    role: { fr: "Fondateur & Direction Créative", en: "Founder & Creative Director" },
+    role: { fr: "Co-fondateur · Direction Créative", en: "Co-founder · Creative Director" },
     socials: [
       { type: "linkedin", href: "https://www.linkedin.com/in/kangue-loic" },
       { type: "instagram", href: "https://www.instagram.com/kangue.loic" },
       { type: "website", href: "https://kreativeinfluss.com" },
+    ],
+  },
+  {
+    name: "Njoume Eteh Claude Arsene Calvin",
+    role: { fr: "Co-fondateur · Graphic Designer & Développeur", en: "Co-founder · Graphic Designer & Developer" },
+    socials: [
+      { type: "linkedin", href: "https://www.linkedin.com/in/claude-arsene-njoume" },
+      { type: "github", href: "https://github.com/claude-arsene" },
+      { type: "instagram", href: "https://www.instagram.com/claude.arsene" },
     ],
   },
   {
@@ -97,7 +106,7 @@ function About() {
       </section>
 
       <section className="container-x pb-28 grid md:grid-cols-12 gap-10 hairline-t pt-16">
-        <p className="md:col-span-4 eyebrow">— {lang === "fr" ? "Studio" : "Studio"}</p>
+        <p className="md:col-span-4 eyebrow">· {lang === "fr" ? "Studio" : "Studio"}</p>
         <Reveal className="md:col-span-8">
           <p className="text-xl md:text-2xl leading-snug font-display max-w-3xl">
             {t("about.body")}
@@ -109,14 +118,14 @@ function About() {
         <div className="container-x py-24 grid md:grid-cols-2 gap-px bg-hairline">
           <Reveal delay={0}>
             <div className="bg-surface p-10 md:p-14">
-              <p className="eyebrow">— {t("about.mission.title")}</p>
+              <p className="eyebrow">· {t("about.mission.title")}</p>
               <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.mission.title")}</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.mission.body")}</p>
             </div>
           </Reveal>
           <Reveal delay={80}>
             <div className="bg-surface p-10 md:p-14">
-              <p className="eyebrow">— {t("about.vision.title")}</p>
+              <p className="eyebrow">· {t("about.vision.title")}</p>
               <h2 className="font-display text-3xl md:text-4xl mt-6">{t("about.vision.title")}</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.vision.body")}</p>
             </div>
@@ -154,7 +163,7 @@ function About() {
                           href={s.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`${m.name} — ${s.type}`}
+                          aria-label={`${m.name} · ${s.type}`}
                           className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-hairline text-muted-foreground hover:border-primary hover:text-primary transition-colors"
                         >
                           <Icon size={14} />
