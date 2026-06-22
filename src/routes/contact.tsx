@@ -17,11 +17,11 @@ export const Route = createFileRoute("/contact")({
 });
 
 const CURRENCIES = [
-  { code: "EUR", symbol: "€", brackets: ["< 10k", "10–25k", "25–60k", "60k+"] },
-  { code: "USD", symbol: "$", brackets: ["< 10k", "10–25k", "25–60k", "60k+"] },
-  { code: "GBP", symbol: "£", brackets: ["< 10k", "10–25k", "25–60k", "60k+"] },
-  { code: "XAF", symbol: "FCFA", brackets: ["< 6M", "6–15M", "15–40M", "40M+"] },
-  { code: "CAD", symbol: "C$", brackets: ["< 15k", "15–35k", "35–80k", "80k+"] },
+  { code: "EUR", symbol: "€", brackets: ["500 – 5k", "5k – 15k", "15k – 45k", "45k+"] },
+  { code: "USD", symbol: "$", brackets: ["500 – 5k", "5k – 18k", "18k – 55k", "55k+"] },
+  { code: "GBP", symbol: "£", brackets: ["400 – 4k", "4k – 12k", "12k – 40k", "40k+"] },
+  { code: "XAF", symbol: "FCFA", brackets: ["300k – 3M", "3M – 10M", "10M – 30M", "30M+"] },
+  { code: "CAD", symbol: "C$", brackets: ["750 – 7k", "7k – 22k", "22k – 65k", "65k+"] },
 ] as const;
 
 const RECIPIENT = "kangue.patrick21@gmail.com";
