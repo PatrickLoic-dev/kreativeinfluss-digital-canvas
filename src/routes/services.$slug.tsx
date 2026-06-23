@@ -54,7 +54,7 @@ function ServiceDetail() {
       </section>
 
       <section className="container-x py-20 hairline-b">
-        <div className="grid md:grid-cols-12 gap-8 mb-12">
+        <div className="grid md:grid-cols-12 gap-8 mb-16">
           <p className="md:col-span-4 eyebrow">{t("service.process")}</p>
           <p className="md:col-span-8 text-muted-foreground max-w-2xl">
             {lang === "fr"
@@ -62,28 +62,32 @@ function ServiceDetail() {
               : "Each step in our process delivers concrete outputs."}
           </p>
         </div>
-        <ol className="space-y-px bg-hairline">
+        <ol className="space-y-16">
           {service.process[lang].map((step, i) => {
+            const description = service.processDescriptions[lang][i];
             const deliverable = service.deliverables[lang][i];
             return (
               <Reveal key={i} delay={i * 80}>
-                <li className="bg-background grid md:grid-cols-12 gap-8 p-8 md:p-10">
-                  <div className="md:col-span-1">
-                    <span className="font-display text-sm text-muted-foreground tabular-nums">0{i + 1}</span>
-                  </div>
-                  <div className="md:col-span-6">
-                    <h3 className="font-display text-2xl md:text-3xl tracking-tight">{step}</h3>
-                  </div>
-                  <div className="md:col-span-5">
-                    {deliverable && (
-                      <>
-                        <p className="eyebrow mb-3">{t("service.deliverables")}</p>
-                        <div className="flex items-start gap-3">
-                          <span className="text-primary text-lg leading-none mt-1.5">●</span>
-                          <span className="font-display text-lg">{deliverable}</span>
+                <li className="hairline-b pb-16 last:border-b-0 last:pb-0">
+                  <div className="grid md:grid-cols-12 gap-6 md:gap-10">
+                    <div className="md:col-span-1">
+                      <span className="font-display text-sm text-muted-foreground tabular-nums">0{i + 1}</span>
+                    </div>
+                    <div className="md:col-span-11">
+                      <h3 className="font-display text-2xl md:text-3xl tracking-tight">{step}</h3>
+                      {description && (
+                        <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">{description}</p>
+                      )}
+                      {deliverable && (
+                        <div className="mt-8">
+                          <p className="eyebrow mb-3">{t("service.deliverables")}</p>
+                          <div className="flex items-start gap-3">
+                            <span className="text-primary text-lg leading-none mt-1.5">●</span>
+                            <span className="font-display text-lg">{deliverable}</span>
+                          </div>
                         </div>
-                      </>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </li>
               </Reveal>
