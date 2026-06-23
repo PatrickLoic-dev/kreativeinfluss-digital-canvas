@@ -5,6 +5,7 @@ export type Service = {
   short: { fr: string; en: string };
   long: { fr: string; en: string };
   process: { fr: string[]; en: string[] };
+  processDescriptions: { fr: string[]; en: string[] };
   deliverables: { fr: string[]; en: string[] };
 };
 
@@ -25,9 +26,37 @@ export const services: Service[] = [
       fr: ["Audit & spécifications techniques", "Architecture & choix de stack", "Développement itératif", "QA, performance & SEO", "Déploiement & monitoring"],
       en: ["Audit & technical specs", "Architecture & stack choices", "Iterative development", "QA, performance & SEO", "Deployment & monitoring"],
     },
+    processDescriptions: {
+      fr: [
+        "Nous analysons en profondeur vos besoins métier, auditons votre infrastructure existante et formalisons les spécifications techniques et fonctionnelles de votre projet.",
+        "Nous définissons l'architecture technique adaptée à vos contraintes de performance, scalabilité et budget, et sélectionnons la stack technologique optimale.",
+        "Nous développons votre solution par itérations courtes avec des revues régulières, assurant transparence et capacité d'ajustement tout au long du projet.",
+        "Nous réalisons des tests approfondis sur tous les devices, optimisons les performances et mettons en place les bonnes pratiques SEO techniques.",
+        "Nous déployons votre solution en production avec une pipeline CI/CD robuste, configurons le monitoring et assurons un support post-lancement.",
+      ],
+      en: [
+        "We deeply analyze your business needs, audit your existing infrastructure and formalize the technical and functional specifications of your project.",
+        "We define the technical architecture suited to your performance, scalability and budget constraints, and select the optimal technology stack.",
+        "We develop your solution through short iterations with regular reviews, ensuring transparency and adjustability throughout the project.",
+        "We carry out thorough testing on all devices, optimize performance and implement technical SEO best practices.",
+        "We deploy your solution to production with a robust CI/CD pipeline, configure monitoring and provide post-launch support.",
+      ],
+    },
     deliverables: {
-      fr: ["Code source documenté", "Design system intégré", "Pipeline CI/CD", "Documentation technique", "Support post-lancement"],
-      en: ["Documented source code", "Integrated design system", "CI/CD pipeline", "Technical documentation", "Post-launch support"],
+      fr: [
+        "Rapport d'audit technique · Cahier des charges fonctionnel",
+        "Architecture technique documentée · Stack & outils validés",
+        "Code source versionné · Sprints review & démo",
+        "Rapport de tests · Audit Lighthouse · Optimisations SEO",
+        "Environnement de production · Monitoring & alertes · Support post-lancement",
+      ],
+      en: [
+        "Technical audit report · Functional requirements document",
+        "Documented technical architecture · Validated stack & tools",
+        "Versioned source code · Sprint reviews & demos",
+        "Test report · Lighthouse audit · SEO optimizations",
+        "Production environment · Monitoring & alerts · Post-launch support",
+      ],
     },
   },
   {
@@ -46,9 +75,37 @@ export const services: Service[] = [
       fr: ["Recherche & cadrage", "Wireframes & flows", "Maquettes haute-fidélité", "Prototypage & tests", "Design system"],
       en: ["Research & framing", "Wireframes & flows", "High-fidelity mockups", "Prototyping & testing", "Design system"],
     },
+    processDescriptions: {
+      fr: [
+        "Nous menons des entretiens utilisateurs, analysons les parcours existants et cadrons les enjeux métier pour orienter le design.",
+        "Nous structurons l'information et prototypons les parcours clés pour valider l'architecture de votre produit avant le design visuel.",
+        "Nous concevons les interfaces finales avec un niveau de détail pixel-perfect, en veillant à la cohérence visuelle et à l'accessibilité.",
+        "Nous créons des prototypes interactifs et menons des tests utilisateurs pour valider les choix d'interface avant le développement.",
+        "Nous construisons un design system complet et documenté pour garantir la scalabilité et la cohérence de votre produit sur le long terme.",
+      ],
+      en: [
+        "We conduct user interviews, analyze existing journeys and frame business challenges to guide the design.",
+        "We structure information and prototype key journeys to validate your product's architecture before visual design.",
+        "We design the final interfaces with pixel-perfect detail, ensuring visual consistency and accessibility.",
+        "We create interactive prototypes and run user tests to validate interface choices before development.",
+        "We build a complete, documented design system to ensure the scalability and consistency of your product in the long term.",
+      ],
+    },
     deliverables: {
-      fr: ["Maquettes Figma", "Design tokens", "Composants documentés", "Prototypes interactifs", "Guidelines d'usage"],
-      en: ["Figma mockups", "Design tokens", "Documented components", "Interactive prototypes", "Usage guidelines"],
+      fr: [
+        "Rapport de recherche utilisateur · Matrice de priorisation",
+        "Wireframes validés · User flows documentés",
+        "Maquettes finales Figma · Spécifications de design",
+        "Prototype interactif · Rapport de tests utilisateurs",
+        "Design system documenté · Composants réutilisables · Design tokens",
+      ],
+      en: [
+        "User research report · Prioritization matrix",
+        "Validated wireframes · Documented user flows",
+        "Final Figma mockups · Design specifications",
+        "Interactive prototype · User test report",
+        "Documented design system · Reusable components · Design tokens",
+      ],
     },
   },
   {
@@ -67,9 +124,37 @@ export const services: Service[] = [
       fr: ["Discovery & moodboard", "Conception du logo", "Système graphique", "Application sur supports", "Brand book"],
       en: ["Discovery & moodboard", "Logo design", "Graphic system", "Application on assets", "Brand book"],
     },
+    processDescriptions: {
+      fr: [
+        "Nous explorons votre univers, vos valeurs et votre audience pour définir la direction créative et établir un moodboard directionnel.",
+        "Nous concevons votre logo et ses déclinaisons en veillant à sa lisibilité, sa mémorabilité et sa capacité à se décliner sur tous les supports.",
+        "Nous construisons un système graphique cohérent incluant palette, typographies, pictogrammes et règles de composition.",
+        "Nous appliquons l'identité sur l'ensemble de vos supports de communication print et digitaux avec rigueur et précision.",
+        "Nous rédigons un brand book complet formalisant l'usage de votre identité pour garantir sa pérennité et sa cohérence.",
+      ],
+      en: [
+        "We explore your universe, values and audience to define the creative direction and establish a directional moodboard.",
+        "We design your logo and its variations, ensuring its readability, memorability and ability to adapt across all media.",
+        "We build a coherent graphic system including palette, typography, iconography and composition rules.",
+        "We apply the identity across all your print and digital communication materials with rigor and precision.",
+        "We write a complete brand book formalizing the use of your identity to ensure its longevity and consistency.",
+      ],
+    },
     deliverables: {
-      fr: ["Logo & déclinaisons", "Palette & typographie", "Templates print/digital", "Brand guidelines", "Assets sources"],
-      en: ["Logo & variations", "Palette & typography", "Print/digital templates", "Brand guidelines", "Source assets"],
+      fr: [
+        "Moodboard validé · Direction créative approuvée",
+        "Logo & déclinaisons · Fichiers sources vectoriels",
+        "Palette de couleurs · Typographies · Grille graphique",
+        "Templates print & digital · Mockups réalistes",
+        "Brand book complet · Guidelines d'utilisation",
+      ],
+      en: [
+        "Validated moodboard · Approved creative direction",
+        "Logo & variations · Vector source files",
+        "Color palette · Typography · Graphic grid",
+        "Print & digital templates · Realistic mockups",
+        "Complete brand book · Usage guidelines",
+      ],
     },
   },
   {
@@ -88,9 +173,37 @@ export const services: Service[] = [
       fr: ["Audit marque & marché", "Positionnement & messaging", "Plan stratégique 360", "Roadmap éditoriale", "KPI & suivi"],
       en: ["Brand & market audit", "Positioning & messaging", "360 strategic plan", "Editorial roadmap", "KPIs & tracking"],
     },
+    processDescriptions: {
+      fr: [
+        "Nous réalisons un audit approfondi de votre marque, de votre positionnement actuel et de votre environnement concurrentiel.",
+        "Nous définissons votre positionnement différenciant, votre promesse de marque et votre tone of voice.",
+        "Nous élaborons un plan d'action intégré couvrant l'ensemble de vos canaux de communication et de vos publics cibles.",
+        "Nous structurons votre calendrier de publications et définissons les lignes éditoriales adaptées à chaque canal.",
+        "Nous mettons en place des indicateurs de performance et un tableau de bord pour suivre l'efficacité de vos actions de communication.",
+      ],
+      en: [
+        "We carry out an in-depth audit of your brand, current positioning and competitive environment.",
+        "We define your differentiating positioning, brand promise and tone of voice.",
+        "We develop an integrated action plan covering all your communication channels and target audiences.",
+        "We structure your publication calendar and define editorial lines suited to each channel.",
+        "We set up performance indicators and a dashboard to track the effectiveness of your communication actions.",
+      ],
+    },
     deliverables: {
-      fr: ["Brand strategy doc", "Tone of voice", "Plan éditorial", "Calendrier de campagnes", "Tableau de bord KPI"],
-      en: ["Brand strategy doc", "Tone of voice", "Editorial plan", "Campaign calendar", "KPI dashboard"],
+      fr: [
+        "Rapport d'audit · Analyse concurrentielle",
+        "Positionnement stratégique · Messaging framework",
+        "Plan d'action 360° · Roadmap stratégique",
+        "Calendrier éditorial · Lignes éditoriales",
+        "Tableau de bord KPI · Rapport de suivi mensuel",
+      ],
+      en: [
+        "Audit report · Competitive analysis",
+        "Strategic positioning · Messaging framework",
+        "360° action plan · Strategic roadmap",
+        "Editorial calendar · Editorial lines",
+        "KPI dashboard · Monthly tracking report",
+      ],
     },
   },
   {
@@ -109,9 +222,37 @@ export const services: Service[] = [
       fr: ["Audit social & benchmark", "Stratégie de contenu", "Production & publication", "Modération & engagement", "Reporting mensuel"],
       en: ["Social audit & benchmark", "Content strategy", "Production & publication", "Moderation & engagement", "Monthly reporting"],
     },
+    processDescriptions: {
+      fr: [
+        "Nous analysons votre présence actuelle sur les réseaux sociaux et celle de vos concurrents pour identifier les opportunités.",
+        "Nous définissons votre stratégie de contenu, vos thématiques prioritaires et les formats adaptés à chaque plateforme.",
+        "Nous produisons les visuels et rédigeons les copies pour chaque publication selon le calendrier éditorial établi.",
+        "Nous animons votre communauté au quotidien, répondons aux commentaires et messages et assurons la modération.",
+        "Nous vous fournissons un rapport mensuel détaillé avec les performances, les insights et nos recommandations stratégiques.",
+      ],
+      en: [
+        "We analyze your current social media presence and that of your competitors to identify opportunities.",
+        "We define your content strategy, priority themes and formats suited to each platform.",
+        "We produce the visuals and write the copy for each publication according to the established editorial calendar.",
+        "We animate your community daily, respond to comments and messages and ensure moderation.",
+        "We provide you with a detailed monthly report with performance, insights and our strategic recommendations.",
+      ],
+    },
     deliverables: {
-      fr: ["Calendrier éditorial", "Contenus visuels & copy", "Modération quotidienne", "Reporting & insights", "Veille concurrentielle"],
-      en: ["Editorial calendar", "Visual content & copy", "Daily moderation", "Reporting & insights", "Competitive watch"],
+      fr: [
+        "Audit social media · Benchmark concurrentiel",
+        "Stratégie de contenu · Lignes éditoriales",
+        "Contenus visuels & copy · Calendrier éditorial",
+        "Rapport d'engagement · Veille & réponses",
+        "Reporting mensuel · Insights & recommandations",
+      ],
+      en: [
+        "Social media audit · Competitive benchmark",
+        "Content strategy · Editorial lines",
+        "Visual content & copy · Editorial calendar",
+        "Engagement report · Watch & replies",
+        "Monthly report · Insights & recommendations",
+      ],
     },
   },
 ];
